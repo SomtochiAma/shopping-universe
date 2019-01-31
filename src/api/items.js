@@ -42,10 +42,12 @@ export default {
   },
 
   updateItem(id, updatedItem) {
-    const theItem = items.find(item => item.id === id);
+    const theItem = items.find(item => item.id == id);
+    console.log(id, theItem);
     for (let property in updatedItem) {
       theItem[property] = updatedItem[property];
     }
+    console.log(updatedItem);
     return { theItem, items };
   },
 
